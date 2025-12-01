@@ -1,0 +1,49 @@
+
+.container-index {
+    text-align: center;
+}
+
+
+.welcome-text {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+
+.buttons-index {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+
+a.button-link {
+    display: block;
+    background: #eb9225;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+
+a.button-link:hover {
+    background: #c55a1c;
+}
+
+
+.user-box {
+    background: #fff5e8;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #f2b36b;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+    margin-top: 10px;
+}
+
+.user-box .welcome-text {
+    margin: 0 0 15px 0;
+}
