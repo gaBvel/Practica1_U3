@@ -1,19 +1,19 @@
 <?php 
 
-// Incluye la conexión a la base de datos
+// Conectarse a la base de datos
 include 'db_connection.php';
 
 $accion = $_POST['accion'] ?? $_GET['accion'] ?? '';
 $mensaje = '';
 $producto_a_editar = null;
 
-// 1. CREAR / ACTUALIZAR
+// Crear y actualizar
 if ($accion == 'crear' || $accion == 'actualizar') {
     $nombre = $_POST['nombre'] ?? '';
     $precio = $_POST['precio'] ?? 0.00;
     $cantidad = $_POST['cantidad'] ?? 0;
     
-    // Validación mínima
+    // Validaciones, que el nombre no este vacio, el precio y la cantidad sea mayores a 0
     if (empty($nombre) || $precio <= 0 || $cantidad < 0) {
         $mensaje = "<p class='error'>Todos los campos son obligatorios y válidos.</p>";
     } else {
@@ -45,7 +45,7 @@ if ($accion == 'crear' || $accion == 'actualizar') {
     }
 }
 
-// 2. ELIMINAR
+// Eliminar
 if ($accion == 'eliminar') {
     $id = $_GET['id'] ?? null;
     if ($id) {
@@ -65,7 +65,7 @@ if ($accion == 'eliminar') {
 }
 
 
-// 3. OBTENER DATOS PARA EDICIÓN
+// Obtener datos para colocarlos en los campos y poder editar
 if ($accion == 'editar') {
     $id = $_GET['id'] ?? null;
     if ($id) {
@@ -85,7 +85,7 @@ if ($accion == 'editar') {
     }
 }
 
-// 4. LEER (Obtener todos los productos)
+// Leer los datos para hacer la tabla
 try {
     $sql = "SELECT id, nombre, precio, cantidad FROM productos ORDER BY id DESC";
     $productos = $pdo->query($sql)->fetchAll();

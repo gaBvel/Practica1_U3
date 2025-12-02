@@ -22,7 +22,9 @@ if (isset($_SESSION['user_nombre'])) {
 </head>
 
 <body>
+
     <main>
+        
         <div class="container-crud">
 
             <header>
@@ -81,7 +83,9 @@ if (isset($_SESSION['user_nombre'])) {
                 <p class="aviso">No hay productos en el inventario. ¡Crea el primero!</p>
             <?php else: ?>
                 <div class="table-responsive">
+                   
                     <table class="productos-table">
+                        
                         <thead>
                             <tr>
                                 <th>ID</th>
@@ -91,9 +95,11 @@ if (isset($_SESSION['user_nombre'])) {
                                 <th>Acciones</th>
                             </tr>
                         </thead>
+
                         <tbody>
                             <?php foreach ($productos as $producto): ?>
                                 <tr>
+
                                     <td><?php echo htmlspecialchars($producto['id']); ?></td>
                                     <td><?php echo htmlspecialchars($producto['nombre']); ?></td>
                                     <td>$<?php echo number_format(htmlspecialchars($producto['precio']), 2); ?></td>
@@ -103,14 +109,18 @@ if (isset($_SESSION['user_nombre'])) {
                                         <a class="btn-eliminar" href="../php/process_products.php?accion=eliminar&id=<?php echo $producto['id']; ?>"
                                             onclick="return confirm('¿Estás seguro de eliminar el producto: <?php echo htmlspecialchars($producto['nombre']); ?>?');">Eliminar</a>
                                     </td>
+                                    
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
+
                     </table>
+
                 </div>
             <?php endif; ?>
         </div>
     </main>
+
 </body>
 
 </html>
