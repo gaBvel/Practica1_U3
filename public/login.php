@@ -18,12 +18,12 @@
 
             <div>
                 <label for="email">Correo electrónico</label>
-                <input id="email" name="email" type="email" required placeholder="ejemplo@gmail.com" required> <br>
+                <input id="email" name="email" type="email"  placeholder="ejemplo@gmail.com" required> <br>
             </div>
 
             <div>
                 <label for="contrasena">Contraseña</label>
-                <input id="password" name="contrasena" type="contrasena" required/> <br>
+                <input id="password" name="contrasena" type="password"  placeholder="contraseña" minlength="3" required/> <br>
             </div>
 
             <div>

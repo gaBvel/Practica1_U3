@@ -7,7 +7,7 @@ require_once 'db_connection.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     //obtener y limpiar datos
-    $nombre = trim($_POST['nombre']);
+    $nombre = trim($_POST['name']);
     $email = trim($_POST['email']);
     $contrasena_plana = $_POST['contrasena'];
     

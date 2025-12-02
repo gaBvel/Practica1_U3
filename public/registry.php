@@ -18,17 +18,17 @@
 
             <div>
                 <label for="name">Nombre completo</label>
-                <input id="name" name="name" type="text" required minlength="2" placeholder="Nombre" required> <br>
+                <input id="name" name="name" type="text" minlength="2" placeholder="Nombre" required> <br>
             </div>
 
             <div>
                 <label for="email">Correo electrónico</label>
-                <input id="email" name="email" type="email" required placeholder="ejemplo@gmail.com" required> <br>
+                <input id="email" name="email" type="email" placeholder="ejemplo@gmail.com" required> <br>
             </div>
 
             <div>
                 <label for="contrasena">Contraseña</label>
-                <input id="password" name="contrasena" type="contrasena" required/> <br>
+                <input id="password" name="contrasena" type="password" placeholder="contraseña" minlength="3" required/> <br>
             </div>
 
             <div>

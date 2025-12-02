@@ -36,6 +36,7 @@
 
     input[type="text"],
     input[type="email"],
+    input[type="password"],
     input[type="number"] {
       padding: 10px;
       border: 1px solid #ccc;
@@ -47,6 +48,30 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
+    }
+
+    input[type="submit"]{
+      width: 100%;
+      padding: 10px;
+      background: #eb9225;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 10px;
+      background: #eb9225;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s ease;
     }
 
     button {
@@ -64,4 +89,190 @@
     button:hover {
       background: #c55a1c;
     }
+
+
+
+.container-crud {
+    width: 90%;
+    max-width: 3000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #eb9225;
+    font-size: 1.8em;
+}
+
+.btn-logout {
+    padding: 8px 15px;
+    background-color: #dc3545;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-logout:hover {
+    background-color: #c82333;
+}
+
+/* --- Mensajes --- */
+.exito {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.aviso {
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+/* --- Formulario --- */
+.form-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    border-left: 5px solid #eb9225;
+}
+
+.crud-form .form-group {
+    margin-bottom: 15px;
+}
+
+.crud-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.crud-form input[type="text"],
+.crud-form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Asegura que padding no afecte el ancho total */
+}
+
+.btn-submit {
+    padding: 10px 20px;
+    background-color:#eb9225;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #eb9225;
+}
+
+.btn-cancelar {
+    padding: 10px 15px;
+    color: #6c757d;
+    text-decoration: none;
+    border: 1px solid #6c757d;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-cancelar:hover {
+    background-color: #e9ecef;
+}
+
+/* --- Tabla --- */
+.table-title {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.productos-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.productos-table th, .productos-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.productos-table th {
+    background-color: #eb9225;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.productos-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.productos-table tr:hover {
+    background-color: #e9ecef;
+}
+
+/* Acciones de la tabla */
+.acciones {
+    white-space: nowrap; /* Evita que los botones de acción se rompan en varias líneas */
+}
+
+.acciones a {
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.btn-editar {
+    background-color: #ffc107;
+    color: #343a40;
+}
+
+.btn-eliminar {
+    background-color: #dc3545;
+    color: white;
+}
  
